@@ -22,7 +22,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['le.lead_id']) }}
+        {{ generate_surrogate_key(['le.lead_id']) }}
                                                     as lead_sk,
 
         -- natural key

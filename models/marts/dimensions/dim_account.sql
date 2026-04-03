@@ -24,7 +24,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['a.account_id']) }} as account_sk,
+        {{ generate_surrogate_key(['a.account_id']) }} as account_sk,
 
         -- natural key
         a.account_id,

@@ -40,7 +40,7 @@ accounts as (
 final as (
 
     select
-        {{ dbt_utils.generate_surrogate_key(['oh.opportunity_history_id']) }}
+        {{ generate_surrogate_key(['oh.opportunity_history_id']) }}
                                                 as history_sk,
         oh.opportunity_history_id,
         oh.opportunityid                        as opportunity_id,

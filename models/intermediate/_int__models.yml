@@ -16,7 +16,8 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['Won', 'Lost', 'Open']
+              arguments:
+                values: ['Won', 'Lost', 'Open']
       - name: accountid
         description: FK to stg_salesforce__account.
         tests:
@@ -25,8 +26,9 @@ models:
         description: High level pipeline phase from seed.
         tests:
           - accepted_values:
-              values: ['Early', 'Mid', 'Late', 'Closed']
-              severity: warn
+              arguments:
+                values: ['Early', 'Mid', 'Late', 'Closed']
+                severity: warn
 
   - name: int_case_enriched
     description: >
@@ -58,4 +60,5 @@ models:
         tests:
           - not_null
           - accepted_values:
-              values: ['Converted', 'Deleted', 'Active']
+              arguments:
+                values: ['Converted', 'Deleted', 'Active']

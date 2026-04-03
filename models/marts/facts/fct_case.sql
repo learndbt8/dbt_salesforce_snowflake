@@ -36,7 +36,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['ce.case_id']) }}
+        {{ generate_surrogate_key(['ce.case_id']) }}
                                                     as case_sk,
 
         -- natural key

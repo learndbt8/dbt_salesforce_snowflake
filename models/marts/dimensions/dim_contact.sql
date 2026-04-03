@@ -24,7 +24,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['c.contact_id']) }} as contact_sk,
+        {{ generate_surrogate_key(['c.contact_id']) }} as contact_sk,
 
         -- natural key
         c.contact_id,

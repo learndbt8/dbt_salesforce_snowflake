@@ -44,7 +44,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['oe.opportunity_id']) }}
+        {{ generate_surrogate_key(['oe.opportunity_id']) }}
                                                     as opportunity_sk,
 
         -- natural key
