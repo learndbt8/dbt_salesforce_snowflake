@@ -7,7 +7,7 @@ models:
       Includes window metrics — rank by amount, running won amount per quarter,
       LAG for previous stage, deal size category and audit columns.
     tests:
-      - dbt_utils.unique_combination_of_columns:
+      - unique_combination_of_columns:
           arguments:
             combination_of_columns:
               - opportunity_id
@@ -102,7 +102,7 @@ models:
       Case fact table. Includes SLA tracking, resolution timing,
       priority flags, resolution speed and window metrics per account.
     tests:
-      - dbt_utils.unique_combination_of_columns:
+      - unique_combination_of_columns:
           arguments:
             combination_of_columns:
               - case_id
@@ -185,7 +185,7 @@ models:
       Lead fact table. Includes lifecycle stage, conversion tracking,
       hot lead flag, owner conversion rate and window metrics.
     tests:
-      - dbt_utils.unique_combination_of_columns:
+      - unique_combination_of_columns:
           arguments:
             combination_of_columns:
               - lead_id
