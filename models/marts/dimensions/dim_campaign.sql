@@ -24,7 +24,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['c.campaign_id']) }} as campaign_sk,
+        {{ generate_surrogate_key(['c.campaign_id']) }} as campaign_sk,
 
         -- natural key
         c.campaign_id,

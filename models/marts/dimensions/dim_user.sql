@@ -33,7 +33,7 @@ final as (
 
     select
         -- surrogate key
-        {{ dbt_utils.generate_surrogate_key(['u.user_id']) }} as user_sk,
+        {{ generate_surrogate_key(['u.user_id']) }} as user_sk,
 
         -- natural key
         u.user_id,
